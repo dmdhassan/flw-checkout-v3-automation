@@ -69,7 +69,7 @@ public class Payment {
     }
 
     public String getFullName() {
-        return firstName + lastName;
+        return firstName + " " + lastName;
     }
 
     public String getEmail() {

@@ -15,7 +15,7 @@ public class BaseTests {
     Payment payment = new Payment(
             "NG",
             "NGN",
-            311,
+            231,
             "08141745803",
             "firstName",
             "lastName",
