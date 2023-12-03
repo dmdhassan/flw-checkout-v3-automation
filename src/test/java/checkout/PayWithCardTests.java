@@ -14,7 +14,7 @@ public class PayWithCardTests extends BaseTests {
         var authPage = card.clickPay();
         getWindowManager().switchToTab("rave-api");
 
-        authPage.enterOtp("123456");
+        authPage.enterOtp("123456", "card");
         authPage.submit();
 
         getWindowManager().switchToTab("checkout-v3");

@@ -93,7 +93,7 @@ public class Payment {
                 "&customer_email="+getEmail()+
                 "&amount="+getAmount()+
                 "&customer_phone="+getPhone()+
-                "&payment_options=card,account,ussd,banktransfer,qr,barter,alipay,mpesa,mobilemoney,payattitude,1voucher,mobilemoney,card,ussd,mpesa,cryptocurrency,wechat,paga,internetbanking,nqr" +
+                "&payment_options=card,account,ussd,banktransfer,qr,barter,alipay,mpesa,mobilemoney,1voucher,mobilemoney,card,ussd,mpesa,cryptocurrency,wechat,paga,internetbanking,nqr" +
                 "&customer_fullname="+ getFullName();
     }
 

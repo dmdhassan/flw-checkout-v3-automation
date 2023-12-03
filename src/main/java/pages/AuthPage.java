@@ -12,17 +12,28 @@ public class AuthPage {
     private WebDriver driver;
     private WebDriverWait wait;
     private By otpInput = By.id("fake_otp");
+    private By captchaInput = By.id("captcha-input");
     private By submitButton = By.id("mocksubmit");
+    private By captchaSubmitButton = By.id("captcha-submit");
+    private By accountNumberInput = By.id(".fake_otp[type='text']");
 
     public AuthPage(WebDriver driver) {
         this.driver = driver;
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
-    public void enterOtp(String otp) {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(otpInput));
-        WebElement otpInputElement = driver.findElement(otpInput);
-        otpInputElement.sendKeys(otp);
+    public void enterOtp(String otp, String paymentType) {
+
+        if (paymentType.equals("card")) {
+            wait.until(ExpectedConditions.visibilityOfElementLocated(otpInput));
+            WebElement otpInputElement = driver.findElement(otpInput);
+            otpInputElement.sendKeys(otp);
+        }
+
+        if (paymentType.equals("bank")) {
+
+        }
+
     }
 
     public CheckoutPage submit() {

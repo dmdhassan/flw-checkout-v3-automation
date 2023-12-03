@@ -15,18 +15,16 @@ public class BaseTests {
     Payment payment = new Payment(
             "NG",
             "NGN",
-            231,
+            200,
             "08141745803",
-            "firstName",
-            "lastName",
-            "hassanyahya@gmail.com",
+            "John",
+            "Doe",
+            "test@flutterwave.com",
             "Bank",
             "FLWPUBK-6cbb62c7b01a981fb38406604ab3727e-X"
     );
 
     String checkoutLink = payment.getLink();
-
-
 
     @BeforeClass
     public void setUp() {

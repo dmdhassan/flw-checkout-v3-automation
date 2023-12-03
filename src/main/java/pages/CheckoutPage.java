@@ -35,10 +35,6 @@ public class CheckoutPage {
         System.out.println("--- Selected " + paymentOption + " payment option ---");
     }
 
-    public PayWithCard card() {
-        return new PayWithCard(driver);
-    }
-
     public String getSuccessMessage() {
         wait.until(ExpectedConditions.visibilityOfElementLocated(successMessage));
         WebElement successMessageElement = driver.findElement(successMessage);
@@ -54,5 +50,12 @@ public class CheckoutPage {
         }catch(IOException e){
             e.printStackTrace();
         }
+    }
+
+    public PayWithCard card() {
+        return new PayWithCard(driver);
+    }
+    public PayWithBank bank() {
+        return new PayWithBank(driver);
     }
 }
